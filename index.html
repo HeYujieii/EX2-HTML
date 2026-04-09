@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shinchan - Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b9e7f7;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .banner-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .banner-img-full {
+            width: 100%;
+            max-width: 1100px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .banner-img-small {
+            max-width: 300px;
+            height: auto;
+            display: block;
+        }
+
+        .main-title {
+            font-size: 3em;
+            color: #dc597a;
+        }
+
+
+        nav {
+            padding: 16px 20px;
+            text-align: center;
+            background-color: #e3f2fd;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 20px;
+            color: #1565c0;
+            font-weight: bold;
+            padding: 10px 24px;
+            border: 1px solid #90caf9;
+            border-radius: 30px;
+            display: inline-block;
+            transition: all 0.2s ease;
+        }
+
+        nav a:hover {
+            color: white;
+            background-color: #1976d2;
+            border-color: #1976d2;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            padding: 30px;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 12px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #dc597a;
+        }
+
+        h3 {
+            margin: 10px 0;
+            color: #1b6407;
+        }
+
+        video {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .characters-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .character-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            background-color: #daeed2;
+            transition: transform 0.3s ease;
+        }
+
+        .character-card:hover {
+            transform: scale(1.02);
+        }
+
+        .character-img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 8px;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+        }
+
+        input[type="radio"] {
+            width: auto;
+        }
+
+        textarea {
+            min-height: 60px;
+        }
+
+        button {
+            padding: 10px 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            background-color: #eee;
+        }
+
+        button:hover {
+            background-color: #ddd;
+            border-color: #999;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #f0e6c5;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2em;
+            }
+            section {
+                padding: 20px;
+            }
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 1.5em;
+            }
+            .banner-img-small {
+                max-width: 200px;
+            }
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="banner-container">
+            <h1 class="main-title">Shinchan: Shiro and the Coal Town</h1>
+            <img src="assets/shin-chan-banner.jpg" alt="Shinchan Banner" class="banner-img-full">
+        </div>
+    </header>
+
+    <nav>
+        <a href="#video">Video</a>
+        <a href="#characters">Characters</a>
+        <a href="#survey">Survey</a>
+    </nav>
+
+    <main>
+        
+        <section id="game">
+            <h2>Shinchan: Shiro and the Coal Town</h2>
+            <video controls>
+                <source src="assets/shinchan-and-the-coal-town.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+           
+            <p style="margin-top: 10px; text-align: center; background-color: #90caf9; padding: 8px 20px; border-radius: 30px; width: fit-content; margin-left: auto; margin-right: auto;">(Available on: Nintendo Switch and Windows PC)</p>
+
+            <div style="margin-top: 20px; text-align: center;">
+                <img src="assets/shinchan.gif" alt="Shinchan Animation" style="max-width: 250px; height: auto;">
+            </div>
+        </section>
+
+        <section id="characters">
+            <h2>The Characters</h2>
+            <div class="characters-grid">
+                
+                <article class="character-card">
+                    <img src="assets/character-shinchan.png" alt="Shinchan" class="character-img">
+                    <h3>Shinnosuke Nohara (Shinchan)</h3>
+                    <p>His mbti is ENTP. He has thick eyebrows and a round head and a round brain, always showing a naive smile! High emotional intelligence has a lot of skill points.</p>
+                </article>
+
+                <article class="character-card">
+                    <img src="assets/character-misae.webp" alt="Misae" class="character-img">
+                    <h3>Misae Nohara (Mom)</h3>
+                    <p>Her mbti is ESFP. She is a good mother who takes care of her family. She is gentle in heart, loves beauty and has a girl's heart. She is stingy, quick-hot, and hot for three minutes.</p>
+                </article>
+
+                <article class="character-card">
+                    <img src="assets/character-hiroshi.webp" alt="Hiroshi" class="character-img">
+                    <h3>Hiroshi Nohara (Dad)</h3>
+                    <p>His mbti is ESFJ. He is a reliable father and husband who loves his family. He is lustful and stinky. He is a ten-year-old stock manager.</p>
+                </article>
+
+                <article class="character-card">
+                    <img src="assets/character-himawari.png" alt="Himawari" class="character-img">
+                    <h3>Himawari (Sister)</h3>
+                    <p>Her mbti is ENTP. She is the favorite of the Nohara family. She is deeply loved, precocious and fantasy. She is naughty and cute. She is very likable and has more power and wisdom than babies.</p>
+                </article>
+
+                <article class="character-card">
+                    <img src="assets/character-shiro.png" alt="Shiro" class="character-img">
+                    <h3>Yukino Nohara (Shiro)</h3>
+                    <p>Its mbti is ISFJ. He is very loyal, smart and humane. He can buy vegetables, clean up toys, and take care of the children at home.</p>
+                </article>
+
+                <article class="character-card">
+                    <img src="assets/character-toru-kazama.webp" alt="Kazama" class="character-img">
+                    <h3>Toru Kazama</h3>
+                    <p>His mbti is ISTJ. He is excellent in both character and study. He is full of arrogant attributes and loves face. On the surface, he dislikes him, but in fact he attaches great importance to friendship.</p>
+                </article>
+
+                <article class="character-card">
+                    <img src="assets/character-masao-sato.webp" alt="Masao" class="character-img">
+                    <h3>Masao Sato</h3>
+                    <p>His mbti is ISFP. He is timid and crying, but he is very kind. He dreams of being a cartoonist. He is easy to be proud and occasionally a real man.</p>
+                </article>
+
+                <article class="character-card">
+                    <img src="assets/character-nene.jpg" alt="Sakurada Nene" class="character-img">
+                    <h3>Sakurada Nene</h3>
+                    <p>Her mbti is ESFP. She has a strong sense of justice, irritable, impatient and domineering.</p>
+                </article>
+
+                <article class="character-card">
+                    <img src="assets/character-action-kamen.jpg" alt="Action Kamen" class="character-img">
+                    <h3>Action Kamen</h3>
+                    <p>His mbti is ENFJ. He is the children's favorite character. He is good at all kinds of fighting skills. His trick is dynamic light waves.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <img src="assets/shinchan-coal-town-poster.jpg" alt="Game Poster" style="width: 100%; border-radius: 8px; margin-top: 15px;">
+
+        <div style="text-align: center; margin: 40px auto 20px auto; max-width: 1200px; padding: 0 20px;">
+            <img src="assets/naughtiest-son.jpg" alt="Naughtiest Son" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
+        </div>
+
+        <section id="survey">
+            <div style="background-color: #f9e2ea; border-radius: 24px; padding: 25px; margin-bottom: 20px; border: 1px solid #dc597a;">
+                <h2>Who's your favorite?</h2>
+                
+                <div class="form-group">
+                    <label>Who's your favorite character?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="favorite" value="shinchan" checked> Shinchan</label>
+                        <label><input type="radio" name="favorite" value="misae"> Misae</label>
+                        <label><input type="radio" name="favorite" value="hiroshi"> Hiroshi</label>
+                        <label><input type="radio" name="favorite" value="himawari"> Himawari</label>
+                        <label><input type="radio" name="favorite" value="shiro"> Shiro</label>
+                        <label><input type="radio" name="favorite" value="kazama"> Kazama</label>
+                        <label><input type="radio" name="favorite" value="masao"> Masao</label>
+                        <label><input type="radio" name="favorite" value="nene"> Nene</label>
+                        <label><input type="radio" name="favorite" value="actionkamen"> Action Kamen</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="other">Character not in the list? Write their name below:</label>
+                    <input type="text" id="other" name="other" placeholder="Enter character name">
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">Why do you like this character?</label>
+                    <textarea id="reason" name="reason" rows="3" placeholder="State your reasons in a couple of sentences..."></textarea>
+                </div>
+            </div>
+
+
+        <div style="background-color: #daeed2; border-radius: 20px; padding: 20px; margin-bottom: 20px; border: 1px solid #085b1e;">
+            <h3 style="margin: 0 0 18px 0;">Tell us a bit more about yourself</h3>
+
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Your Gender:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Your Date of Birth:</label>
+                    <input type="text" id="dob" name="dob" placeholder="dd.mm.yyyy">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+            </div>
+
+            <button type="submit">Submit</button>
+                
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Programming 4</p>
+        <p>Get in touch with us: shinchan@example.com</p>
+    </footer>
+
+</body>
+</html>
